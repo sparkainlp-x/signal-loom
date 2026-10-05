@@ -83,7 +83,7 @@ MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Jean-François Brisson / Spar
 
 ## Zenodo
 
-Archived software release on [Zenodo](https://zenodo.org/). Concept DOI (all versions): [10.5281/zenodo.23173453](https://doi.org/10.5281/zenodo.23173453). Version DOI for v0.1.0: [10.5281/zenodo.23173455](https://doi.org/10.5281/zenodo.23173455).
+Archived software release on [Zenodo](https://zenodo.org/). Concept DOI (all versions): [10.5281/zenodo.23173453](https://doi.org/10.5281/zenodo.23173453). Latest version DOI (v0.1.1): [10.5281/zenodo.23173943](https://doi.org/10.5281/zenodo.23173943). Version DOI for v0.1.0: [10.5281/zenodo.23173455](https://doi.org/10.5281/zenodo.23173455).
 
 **What Zenodo provides:** an archived, citable software record with a version DOI for each tagged release and a concept DOI that always resolves to the latest version.
 
@@ -97,7 +97,7 @@ Archived software release on [Zenodo](https://zenodo.org/). Concept DOI (all ver
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff). Concept DOI (all versions): [10.5281/zenodo.23173453](https://doi.org/10.5281/zenodo.23173453). Version DOI for v0.1.0: [10.5281/zenodo.23173455](https://doi.org/10.5281/zenodo.23173455).
+See [CITATION.cff](CITATION.cff). Concept DOI (all versions): [10.5281/zenodo.23173453](https://doi.org/10.5281/zenodo.23173453). Latest version DOI (v0.1.1): [10.5281/zenodo.23173943](https://doi.org/10.5281/zenodo.23173943). Version DOI for v0.1.0: [10.5281/zenodo.23173455](https://doi.org/10.5281/zenodo.23173455).
 
 ```
 Brisson, J.-F. (2026). Signal Loom: offline synthetic EEG/ECG-like living score for performance art (v0.1.1). Spark AI NLP. https://doi.org/10.5281/zenodo.23173453

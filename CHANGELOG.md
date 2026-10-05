@@ -4,6 +4,8 @@ All notable changes to this project. Evidence tag: SYNTHETIC (everything here ru
 
 ## 0.1.1 — 2026-10-05
 
+Archived on Zenodo: version DOI [10.5281/zenodo.23173943](https://doi.org/10.5281/zenodo.23173943).
+
 Independent-review fixes. Evidence remains SYNTHETIC; results are matched-model software checks, not neuroscience validation. License remains MIT. Cite all versions via the concept DOI [10.5281/zenodo.23173453](https://doi.org/10.5281/zenodo.23173453).
 
 ### Fixed
