@@ -10,6 +10,8 @@ import {
   syntheticEegFeatureAt,
 } from "../signal-model.js";
 import { runShuffledCodeMappingControlCheck, runHeldOutBench } from "../validation.js";
+import { mapRrIntervalToPulse } from "../mapping.js";
+import { readFileSync } from "node:fs";
 
 function pearson(left, right) {
   const count = Math.min(left.length, right.length);
@@ -118,8 +120,31 @@ test("shuffled-code mapping-control check distinguishes driven, time-shuffled, a
   const byCondition = Object.fromEntries(report.arms.map((arm) => [arm.condition, arm]));
   assert.equal(report.arms.length, 3);
   assert.equal(new Set(report.arms.map((arm) => arm.code)).size, 3);
+  // Zero by construction: the target is produced by the same mapper from the same frames (matched-model software check, not independent validation).
+  assert.match(report.note, /zero error is guaranteed by construction.*not independent validation/i);
   assert.equal(byCondition["signal-driven"].mappingError, 0);
   assert.ok(byCondition["time-shuffled"].mappingError > byCondition["signal-driven"].mappingError);
   assert.ok(byCondition["zero-input"].mappingError > byCondition["time-shuffled"].mappingError);
   assert.equal(report.codeKey[byCondition["signal-driven"].code], "signal-driven");
+});
+
+test("R–R interval sets pulse spacing only; pulse gain sets depth only", () => {
+  const slow = mapRrIntervalToPulse(1000, 0.5);
+  const fast = mapRrIntervalToPulse(600, 0.5);
+  assert.notEqual(slow.intervalSeconds, fast.intervalSeconds, "R–R changes spacing");
+  assert.equal(slow.pulseDepth, fast.pulseDepth, "R–R does not change depth");
+  const low = mapRrIntervalToPulse(800, 0.1);
+  const high = mapRrIntervalToPulse(800, 0.9);
+  assert.equal(low.intervalSeconds, high.intervalSeconds, "gain does not change spacing");
+  assert.ok(high.pulseDepth > low.pulseDepth, "gain changes depth");
+});
+
+test("UI labels match the implemented mappings and mark mind/heart projection as metaphor", () => {
+  const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+  assert.ok(!/depth \+ spacing/i.test(html), "R–R must not be described as controlling pulse depth");
+  assert.match(html, /R–R interval sets pulse spacing; pulse gain sets depth/);
+  assert.match(html, /<h2>Synthetic EEG-like feature<\/h2>/);
+  assert.match(html, /<h2>Synthetic ECG-like beat stream<\/h2>/);
+  assert.match(html, /“MIND PROJECTION” · METAPHOR ONLY/);
+  assert.match(html, /“HEART PROJECTION” · METAPHOR ONLY/);
 });

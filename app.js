@@ -277,7 +277,7 @@ byId("runMappingControlCheck").addEventListener("click", (event) => {
       const resultHtml = measurements.map((result) => `<div class="mapping-control-arm"><span>CODE ${result.code} → ${result.condition.toUpperCase()}</span><strong>mapping error ${result.mappingError.toFixed(4)}</strong><small>mean score-frame draw ${result.renderLatencyMs.toFixed(3)} ms</small></div>`).join("");
       byId("mappingControlMetrics").innerHTML = resultHtml;
       status.textContent = "Scored · randomized software codes reported with condition names";
-      byId("mappingControlFootnote").textContent = `Software-randomized condition labels: ${Object.entries(report.codeKey).map(([code, condition]) => `${code} = ${condition}`).join(" · ")}. Field-spread MAE is relative to the signal-driven target. Draw latency is local browser canvas time per frame over ${report.frameCount} frames/arm, not end-to-end input latency. This is not a genuinely blinded or human-perception study.`;
+      byId("mappingControlFootnote").textContent = `Software-randomized condition labels: ${Object.entries(report.codeKey).map(([code, condition]) => `${code} = ${condition}`).join(" · ")}. Field-spread MAE is relative to the signal-driven target; the signal-driven arm is zero by construction (same mapper, same frames), so this is a matched-model software check, not independent validation. Draw latency is local browser canvas time per frame over ${report.frameCount} frames/arm, not end-to-end input latency. This is not a genuinely blinded or human-perception study.`;
     } catch (error) { status.textContent = `Control check failed: ${error instanceof Error ? error.message : "unknown error"}`; }
     finally { button.disabled = false; }
   }, 20);
