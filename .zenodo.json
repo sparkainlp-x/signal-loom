@@ -11,7 +11,7 @@
     }
   ],
   "access_right": "open",
-  "license": "agpl-3.0-only",
+  "license": "mit",
   "language": "eng",
   "keywords": [
     "synthetic",
@@ -43,5 +43,5 @@
       "identifier": "spark-ai-nlp"
     }
   ],
-  "notes": "Evidence status: SYNTHETIC. Matched-model software check only — not a blind estimator, not neuroscience validation, not real EEG–ECG physiology. Not a medical device. Licensed AGPL-3.0-only (see LICENSE and COMMERCIAL-LICENSE.md). A Zenodo deposit would provide a citable software release (version DOI + concept DOI); it is not peer review, endorsement, or a guarantee of users, citations, or funding. No GitHub Release / Zenodo publish in this initial deposit-ready setup."
+  "notes": "Evidence status: SYNTHETIC. Matched-model software check only — not a blind estimator, not neuroscience validation, not real EEG–ECG physiology. Not a medical device. Licensed MIT (explicit in .zenodo.json; Zenodo’s default CC BY 4.0 is incorrect for this software). A Zenodo deposit would provide a citable software release (version DOI + concept DOI); it is not peer review, endorsement, or a guarantee of users, citations, or funding. No GitHub Release / Zenodo publish in this initial deposit-ready setup."
 }
