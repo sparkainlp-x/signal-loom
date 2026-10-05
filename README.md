@@ -1,0 +1,90 @@
+# Signal Loom — synthetic living score
+
+Offline **performance-art** software prototype by [Spark AI NLP](https://sparkainlpx.xyz): separate **synthetic EEG-like** and **synthetic ECG-like** streams become a simple interactive score. The EEG slow-envelope feature expands an abstract 2D visual field; ECG-derived synthetic R–R intervals set the pulse rhythm; an adjustable synthetic β/τ injection draws the timing thread. These are authored feature-to-visual rules for creating with signals, not just viewing traces.
+
+[![CI](https://github.com/sparkainlp-x/signal-loom/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkainlp-x/signal-loom/actions/workflows/ci.yml)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
+[![Status: performance-art prototype](https://img.shields.io/badge/status-performance%20art%20prototype-orange.svg)](#safety-notice)
+[![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-blue.svg)](#safety-notice)
+[![DOI: pending](https://img.shields.io/badge/DOI-pending-lightgrey.svg)](#citation)
+
+**Live demo:** https://sparkainlp-x.github.io/signal-loom/
+
+> **Every signal is synthetic.** “Mind projection” and “heart projection” are display metaphors: this is not a physical hologram, does not read thoughts or represent a real person’s mind or heart, and is not a diagnostic or medical tool. The heart stream is an ECG-like electrical trace; no PPG is included. There is no live data, sensor/device connection, audio, camera, or network request.
+
+Author: Jean-François Brisson, Spark AI NLP (https://sparkainlpx.xyz).
+
+## Safety Notice
+
+- Not a medical device.
+- Not diagnostic; not for treatment, patient care, or clinical decision-making.
+- Not clinically validated.
+- Uses **synthetic** EEG-like and ECG-like streams only — not real patient recordings.
+- Not a physical hologram; does not read minds or hearts.
+- Offline by design: no live sensors, no network requests, no external CDN assets.
+
+## Run it
+
+Requires Python 3 and Node.js; there are no dependencies to install.
+
+```bash
+npm run start
+```
+
+Open <http://127.0.0.1:8000>. Stop the local server with `Ctrl+C`.
+
+Run the deterministic tests:
+
+```bash
+npm test
+```
+
+## Play the score
+
+- **EEG slow envelope → field expansion:** the feature is a rolling amplitude summary of the synthetic EEG-like stream; adjust its mapping gain to shape the visual spread.
+- **ECG R–R interval → pulse rhythm:** the beat interval comes from the separate synthetic ECG model; adjust pulse gain for its visual depth. No PPG is generated.
+- **β / τ → timing thread:** β scales a deliberately injected EEG component patterned after synthetic ECG beat times; τ sets its delay. **β = 0** removes the injected link. This is a simulation parameter, not physiology or causal evidence.
+- **Common-noise confound:** with β set to 0, raise the shared-clock disturbance to see similar structure arise in both streams without the injected link.
+- **Voice, movement, music:** authored future-layer placeholders only; no measurements or device inputs are fabricated.
+- **Analog input:** future stub only. No electrode, device, microphone, or hardware connector is implemented.
+
+The **shuffled-code mapping-control check** compares field-mapping error for signal-driven, time-shuffled, and zero-input conditions. Condition labels receive randomized software codes, but the code/scorer retains their mapping throughout; this is not a genuinely blinded or human-perception study. It also reports mean canvas draw time per frame in the local browser; draw time is not end-to-end sensor latency.
+
+The **robustness bench** uses held-out seeds 23, 41, 67, and 89 to measure recovery of known β/τ and ECG beat alignment after configurable clock skew, timestamp jitter, noise, and dropped samples. Beat timing error is calculated for matched beats, and detected/true counts are shown separately. Generation and fitting use the same synthetic beat-template family, and fitting receives known synthetic clock-offset corrections. The β/τ results are therefore a matched-model implementation check—not a blind estimator or evidence of EEG/ECG generalization. Run `npm test` to exercise the no-link control, common-noise confound, each distortion, and the score-control comparison.
+
+A stronger future generalization test would use a different held-out signal generator, hide clock offsets from the estimator, include β=0 and shared-noise controls, and score coupling/lag bias, false positives, and timing error.
+
+## Files
+
+| Path | Contents |
+|---|---|
+| `index.html` | Offline interactive score UI |
+| `app.js` | Local interactive renderer |
+| `styles.css` | Layout and visual theme |
+| `signal-model.js` | Signal generation, ECG peak detection, β/τ estimation, EEG feature |
+| `mapping.js` | Feature-to-visual mappings |
+| `validation.js` | Held-out and mapping-control checks |
+| `tests/signal-model.test.js` | Node `--test` suite (12 cases) |
+| `package.json` | `npm start` / `npm test` scripts; no runtime deps |
+
+## Positioning
+
+Signal Loom is an independent Spark AI NLP project. It is not affiliated with, endorsed by, or associated with any external company, clinic, lab or medical organization.
+
+## Possible later offline data-adapter stage — not included
+
+One candidate for a future suitability review is the [GX dataset record on Zenodo](https://zenodo.org/records/15572614), described in the project brief as containing simultaneous EEG, ECG, EOG, and vigilance/alertness behavior over 783+ tES trials and 62 sessions, with CC BY 4.0 noted. See its [dataset descriptor](https://www.nature.com/articles/s41597-021-01046-y). Nothing is downloaded or used here. Confirm the current dataset record, license/terms, and suitability at the time of any future use; a future adapter would remain separate and would not support causal or medical inference.
+
+## License
+
+AGPL-3.0-only — see [LICENSE](LICENSE). Commercial licensing: see [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+
+## Citation
+
+DOI pending Zenodo release. Meanwhile:
+
+```
+Brisson, J.-F. (2026). Signal Loom: offline synthetic EEG/ECG-like living score for performance art (v0.1.0). Spark AI NLP. https://github.com/sparkainlp-x/signal-loom
+```
+
+See also [CITATION.cff](CITATION.cff) and [.zenodo.json](.zenodo.json).

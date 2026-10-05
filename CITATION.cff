@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. All outputs are SYNTHETIC; this is an offline performance-art prototype, not a medical device."
+title: "Signal Loom: offline synthetic EEG/ECG-like living score for performance art"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    affiliation: "Spark AI NLP"
+    orcid: "https://orcid.org/0009-0000-9778-5374"
+repository-code: "https://github.com/sparkainlp-x/signal-loom"
+url: "https://sparkainlp-x.github.io/signal-loom/"
+license: AGPL-3.0-only
+version: "0.1.0"
+abstract: >-
+  Offline browser performance-art prototype by Spark AI NLP. Separate
+  synthetic EEG-like and synthetic ECG-like streams become an interactive
+  visual score: EEG slow-envelope expands a 2D field, ECG-derived synthetic
+  R–R intervals set pulse rhythm, and an adjustable β/τ injection draws a
+  timing thread. Includes held-out robustness and shuffled-code mapping
+  controls under Node tests. No live sensors, no network requests, no
+  medical claims. SYNTHETIC evidence only. Not a medical device, not
+  diagnostic, not a physical hologram, not mind reading.
+keywords:
+  - synthetic
+  - EEG-like
+  - ECG-like
+  - performance-art
+  - offline
+  - visualization
+  - living score
+  - research prototype
+references:
+  - type: software
+    title: "OES-Resilience: benchmarking telemetry intelligence under real-world stress"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+        orcid: "https://orcid.org/0009-0000-9778-5374"
+    repository-code: "https://github.com/sparkainlp-x/oes-resilience"
+    doi: "10.5281/zenodo.23071166"

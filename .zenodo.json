@@ -1,0 +1,46 @@
+{
+  "upload_type": "software",
+  "title": "Signal Loom: offline synthetic EEG/ECG-like living score for performance art",
+  "version": "0.1.0",
+  "description": "<p><strong>Signal Loom</strong> is an offline browser performance-art prototype by Spark AI NLP. Separate <strong>synthetic EEG-like</strong> and <strong>synthetic ECG-like</strong> streams become an interactive visual score: an EEG slow-envelope feature expands an abstract 2D field; ECG-derived synthetic R–R intervals set pulse rhythm; an adjustable β/τ injection draws a timing thread.</p><p><strong>Contents.</strong> Browser UI (<code>index.html</code>, <code>app.js</code>, <code>styles.css</code>), signal core (<code>signal-model.js</code>), mappings (<code>mapping.js</code>), held-out robustness and shuffled-code mapping-control checks (<code>validation.js</code>), and Node tests with no npm dependencies. Local static serve via Python <code>http.server</code>.</p><p><strong>Limits.</strong> Evidence: SYNTHETIC only. Not a medical device; not diagnostic; not for treatment, patient care or clinical decision-making; not a physical hologram; does not read thoughts or represent a real person’s mind or heart. No live data, sensor/device connection, audio, camera, or network request.</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "affiliation": "Spark AI NLP",
+      "orcid": "0009-0000-9778-5374"
+    }
+  ],
+  "access_right": "open",
+  "license": "agpl-3.0-only",
+  "language": "eng",
+  "keywords": [
+    "synthetic",
+    "EEG-like",
+    "ECG-like",
+    "performance-art",
+    "offline",
+    "visualization",
+    "living score",
+    "research prototype",
+    "JavaScript"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sparkainlp-x/signal-loom",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23071166",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "software"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "spark-ai-nlp"
+    }
+  ],
+  "notes": "Evidence status: SYNTHETIC. Not a medical device. Commercial licensing: see COMMERCIAL-LICENSE.md."
+}
