@@ -10,4 +10,4 @@ All notable changes to this project. Evidence tag: SYNTHETIC (everything here ru
 - Feature-to-visual mappings (`mapping.js`) and held-out / shuffled-code mapping-control checks (`validation.js`).
 - Node `--test` suite (`tests/signal-model.test.js`): no-link control, common-noise confound, held-out robustness, mapping-control comparison.
 - Local static serve via `python3 -m http.server` (`npm start`); no npm dependencies.
-- GitHub Actions CI (Node 18 / 20 / 22), `CITATION.cff`, `.zenodo.json`, MIT `LICENSE`, `SECURITY.md`.
+- GitHub Actions CI (Node 18 / 20 / 22), `CITATION.cff`, `.zenodo.json`, AGPL-3.0-only `LICENSE`, `COMMERCIAL-LICENSE.md`, `SECURITY.md`, `.nojekyll` for GitHub Pages.
