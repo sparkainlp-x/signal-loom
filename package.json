@@ -1,6 +1,6 @@
 {
   "name": "signal-loom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Signal Loom \u2014 offline synthetic EEG/ECG-like living score for performance art (not a medical device).",
   "private": false,
   "type": "module",

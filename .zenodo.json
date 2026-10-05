@@ -1,7 +1,7 @@
 {
   "upload_type": "software",
   "title": "Signal Loom: offline synthetic EEG/ECG-like living score for performance art",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "<p><strong>Signal Loom</strong> is an offline browser performance-art prototype by Spark AI NLP. Separate <strong>synthetic EEG-like</strong> and <strong>synthetic ECG-like</strong> streams become an interactive visual score: an EEG slow-envelope feature expands an abstract 2D field; ECG-derived synthetic R–R intervals set pulse rhythm; an adjustable β/τ injection draws a timing thread.</p><p><strong>Contents.</strong> Browser UI (<code>index.html</code>, <code>app.js</code>, <code>styles.css</code>), signal core (<code>signal-model.js</code>), mappings (<code>mapping.js</code>), held-out robustness and shuffled-code mapping-control checks (<code>validation.js</code>), and Node tests with no npm dependencies. Local static serve via Python <code>http.server</code>.</p><p><strong>Results framing.</strong> The β/τ and beat-alignment checks are a <strong>matched-model synthetic software check</strong>: generation and fitting use the same synthetic beat-template family, and fitting receives known synthetic clock-offset corrections. They are <strong>not</strong> a blind estimator, not neuroscience validation, and not evidence of real EEG–ECG physiology or generalization.</p><p><strong>Limits.</strong> Evidence: SYNTHETIC only. Not a medical device; not diagnostic; not for treatment, patient care or clinical decision-making; not a physical hologram; does not read thoughts or represent a real person’s mind or heart. No live data, sensor/device connection, audio, camera, or network request.</p>",
   "creators": [
     {
@@ -43,5 +43,5 @@
       "identifier": "spark-ai-nlp"
     }
   ],
-  "notes": "Evidence status: SYNTHETIC. Matched-model software check only — not a blind estimator, not neuroscience validation, not real EEG–ECG physiology. Not a medical device. Licensed MIT (explicit in .zenodo.json; Zenodo’s default CC BY 4.0 is incorrect for this software). A Zenodo deposit would provide a citable software release (version DOI + concept DOI); it is not peer review, endorsement, or a guarantee of users, citations, or funding. No GitHub Release / Zenodo publish in this initial deposit-ready setup."
+  "notes": "Evidence status: SYNTHETIC. Matched-model software check only — not a blind estimator, not neuroscience validation, not real EEG–ECG physiology. Not a medical device. Licensed MIT (explicit in .zenodo.json; Zenodo’s default CC BY 4.0 is incorrect for this software). A Zenodo deposit would provide a citable software release (version DOI + concept DOI); it is not peer review, endorsement, or a guarantee of users, citations, or funding. v0.1.1 adds independent-review fixes (R–R/pulse-depth label, synthetic EEG-like/ECG-like primary labels with metaphor tags, zero-by-construction mapping-control wording, Node 22 test script). Cite all versions via the concept DOI 10.5281/zenodo.23173453."
 }

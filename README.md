@@ -100,5 +100,5 @@ Archived software release on [Zenodo](https://zenodo.org/). Concept DOI (all ver
 See [CITATION.cff](CITATION.cff). Concept DOI (all versions): [10.5281/zenodo.23173453](https://doi.org/10.5281/zenodo.23173453). Version DOI for v0.1.0: [10.5281/zenodo.23173455](https://doi.org/10.5281/zenodo.23173455).
 
 ```
-Brisson, J.-F. (2026). Signal Loom: offline synthetic EEG/ECG-like living score for performance art (v0.1.0). Spark AI NLP. https://doi.org/10.5281/zenodo.23173453
+Brisson, J.-F. (2026). Signal Loom: offline synthetic EEG/ECG-like living score for performance art (v0.1.1). Spark AI NLP. https://doi.org/10.5281/zenodo.23173453
 ```
