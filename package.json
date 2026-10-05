@@ -1,11 +1,11 @@
 {
   "name": "signal-loom",
   "version": "0.1.0",
-  "description": "Signal Loom — offline synthetic EEG/ECG-like living score for performance art (not a medical device).",
+  "description": "Signal Loom \u2014 offline synthetic EEG/ECG-like living score for performance art (not a medical device).",
   "private": false,
   "type": "module",
-  "license": "AGPL-3.0-only",
-  "author": "Jean-François Brisson <281253927+sparkainlp-x@users.noreply.github.com> (https://sparkainlpx.xyz)",
+  "license": "MIT",
+  "author": "Jean-Fran\u00e7ois Brisson <281253927+sparkainlp-x@users.noreply.github.com> (https://sparkainlpx.xyz)",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkainlp-x/signal-loom.git"

@@ -3,7 +3,7 @@
 Offline **performance-art** software prototype by [Spark AI NLP](https://sparkainlpx.xyz): separate **synthetic EEG-like** and **synthetic ECG-like** streams become a simple interactive score. The EEG slow-envelope feature expands an abstract 2D visual field; ECG-derived synthetic R–R intervals set the pulse rhythm; an adjustable synthetic β/τ injection draws the timing thread. These are authored feature-to-visual rules for creating with signals, not just viewing traces.
 
 [![CI](https://github.com/sparkainlp-x/signal-loom/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkainlp-x/signal-loom/actions/workflows/ci.yml)
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: performance-art prototype](https://img.shields.io/badge/status-performance%20art%20prototype-orange.svg)](#safety-notice)
 [![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-blue.svg)](#safety-notice)
 [![DOI: pending](https://img.shields.io/badge/DOI-pending-lightgrey.svg)](#citation)
@@ -77,7 +77,23 @@ One candidate for a future suitability review is the [GX dataset record on Zenod
 
 ## License
 
-AGPL-3.0-only — see [LICENSE](LICENSE). Commercial licensing: see [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Jean-François Brisson / Spark AI NLP.
+
+## Zenodo deposit
+
+This repository is set up for a **citable software release** on [Zenodo](https://zenodo.org/) (version DOI + concept DOI) via the GitHub–Zenodo integration.
+
+**What Zenodo provides here:** a archived, citable software record with a version DOI for each tagged release and a concept DOI that always resolves to the latest version.
+
+**What Zenodo does not provide:** peer review, scientific endorsement, validation of real EEG–ECG physiology, or any guarantee of users, citations, or funding.
+
+**License on Zenodo:** MIT (set explicitly in [`.zenodo.json`](.zenodo.json) as `"license": "mit"`). Zenodo’s default for non-dataset uploads is CC BY 4.0, which is incorrect for this software — do not rely on the default.
+
+**Framing:** results described in the deposit are a **matched-model synthetic software check**, not a blind estimator and not neuroscience validation. All signals are synthetic; this is not a medical device.
+
+**File-change policy:** after a version is published, significant changes require a **new version** (new tag / new version DOI). Minor corrections only may be applied within **30 days** after publish, per Zenodo practice.
+
+Enable Zenodo for this repo (user-gated), then create the `v0.1.0` GitHub release to mint the first DOIs. Until then the DOI badge stays pending.
 
 ## Citation
 

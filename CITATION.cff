@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below. All outputs are SYNTHETIC; this is an offline performance-art prototype, not a medical device."
+message: "If you use this software, please cite it as below. All outputs are SYNTHETIC; this is an offline performance-art prototype, not a medical device. Results are a matched-model synthetic software check, not neuroscience validation."
 title: "Signal Loom: offline synthetic EEG/ECG-like living score for performance art"
 type: software
 authors:
@@ -9,7 +9,7 @@ authors:
     orcid: "https://orcid.org/0009-0000-9778-5374"
 repository-code: "https://github.com/sparkainlp-x/signal-loom"
 url: "https://sparkainlp-x.github.io/signal-loom/"
-license: AGPL-3.0-only
+license: MIT
 version: "0.1.0"
 abstract: >-
   Offline browser performance-art prototype by Spark AI NLP. Separate
@@ -17,9 +17,12 @@ abstract: >-
   visual score: EEG slow-envelope expands a 2D field, ECG-derived synthetic
   R–R intervals set pulse rhythm, and an adjustable β/τ injection draws a
   timing thread. Includes held-out robustness and shuffled-code mapping
-  controls under Node tests. No live sensors, no network requests, no
-  medical claims. SYNTHETIC evidence only. Not a medical device, not
-  diagnostic, not a physical hologram, not mind reading.
+  controls under Node tests. The β/τ and beat-alignment results are a
+  matched-model synthetic software check (same template family; known
+  clock-offset corrections), not a blind estimator and not neuroscience
+  validation. No live sensors, no network requests, no medical claims.
+  SYNTHETIC evidence only. Not a medical device, not diagnostic, not a
+  physical hologram, not mind reading.
 keywords:
   - synthetic
   - EEG-like
@@ -29,6 +32,7 @@ keywords:
   - visualization
   - living score
   - research prototype
+  - matched-model check
 references:
   - type: software
     title: "OES-Resilience: benchmarking telemetry intelligence under real-world stress"
